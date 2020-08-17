@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Registration | Book House</title>
+	<link rel="stylesheet" href="css/register_style.css">
+	<link rel="stylesheet" href="fontawesomepro/css/all.min.css" />
+</head>
+<body>
+	<section class="pos">
+		<div class="text">
+			<h1>Book <span>House</span> Registration</h1>
+			<p>A best place for online shopping of book's.</p>
+		</div>
+		<div class="login-pos">
+			<div class="login">
+					<h1>Book<span class="span">House</span></h1>
+				<h1 class="login-txt">Registration</h1>
+				<form action="" method="Post" style="margin: 50px 25px 0">
+					<div class="inputBox">
+						<label for="us">Name</label>
+						<input type="text" name="username" autocomplete="off" required id="us">
+					</div>
+
+					<div class="inputBox">
+						<label for="ps">Father's Name</label>
+						<input type="text" name="password" autocomplete="off" required id="ps">
+					</div>
+
+					<!-- <div class="inputBox">
+						<label for="ps">Gender</label>
+						<p>Male</p>
+						<input type="radio" value="Male" autocomplete="off" required id="ps">
+						<p>female</p>
+						<input type="radio" value="Male" autocomplete="off" required id="ps">
+					</div> -->
+
+					<div class="inputBox">
+						<label for="us">Email</label>
+						<input type="email" name="username" autocomplete="off" required id="us">
+					</div>
+
+					<div class="inputBox">
+						<label for="ps">Password</label>
+						<input type="password" name="password" autocomplete="off" required id="ps">
+					</div>
+
+					<div class="inputBox">
+						<label for="us">Confirm Password</label>
+						<input type="password" name="username" autocomplete="off" required id="us">
+					</div>
+
+					<div class="submit">
+						<input type="submit" name="submit" value="Registration">
+					</div>
+				</form>
+				<div class="login-btn">
+					<p>or &nbsp;</p>
+					<a href="login.html">Login</a>
+				</div>
+			</div>		
+		</div>
+	</section>
+	<!-- <section class="pos-error">
+		<div class="error" id="error">
+			<i class="fa fa-times" aria-hidden="true" style="float: right" onclick="error()"></i>
+			<p>You are not belongs to our database. Please Register first</p>
+		</div>
+	</section> -->
+	
+
+	<script>
+		function error() 
+		{
+			//document.write("hello");
+			var error = document.getElementById("error");
+			error.style.display= "none";
+		}
+	</script>
+</body>
+</html>

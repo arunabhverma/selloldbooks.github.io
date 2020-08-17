@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Home | Book House</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap-4.4.1-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="fontawesomepro/css/all.min.css" />
+	
+	<script src="bootstrap-4.4.1-dist/js/bootstrap.min.js" type="text/javascript" charset="utf-8" async defer></script>
+</head>
+<body>
+<!-- ******************************************navigation************************************************ -->
+<section class="nav-pos">
+	<div class="navbar">
+		<a href="#" class="navbar-logo" title="Book House"><span class="logo-part">Book</span>House</a>
+	</div>	
+
+	<div class="navbar-search" title="Search">
+		<form>
+			<div class="search-div">
+				<input type="search" placeholder="Search..." aria-label="Username" aria-describedby="basic-addon1">
+				<input type="submit" name="submit" id="submit" style="display: none;">
+				
+					<label class="search-icon" for="submit">
+							<i class="fad fa-search search-icon"></i>						
+					</label>
+				
+			</div>
+		</form>	
+	</div>
+
+	<div class="navbar-menu">
+		<ul>
+			<!-- <li><a href="#">Home</a></li> -->
+			<li title="Catagories"><a href="#">Catagories</a></li>
+			
+			<li title="My Books">
+				<!-- <input type="checkbox" id="book">
+				<label for="book">
+					<a href="#">my books</a></i>
+				</label> -->
+				<input type="checkbox" id="bookmenu" class="show">
+				<label for="bookmenu" class="droplabel">my books <i class="far fa-play "></i></label>
+				<div class="dropmenu" id="dropmenu">
+					<ul>
+						<li title="New Books" onclick="mybooks()"><a href="#"><i class="fal fa-books"></i>New book</a></li>
+						<li title="Backpack"><a href="#"><i class="fal fa-backpack"></i>backpack</a></li>
+						<li title="Favourite"><a href="#"><i class="fal fa-heart"></i>Favourite</a></li>
+					</ul>
+				</div>
+
+			<li title="Services"><a href="#">Services</a></li>
+			<li title="Support"><a href="#">Support</a></li>
+		</ul>
+	</div>
+
+	<div class="nav-login">
+		<!-- <div> -->
+			<a href="#" title="Profile" class="profilealink" onclick="showprofile()">
+				<div class="profile">
+					<img src="img/user/profile.jpg" alt="profile">
+				</div>
+			</a>
+
+			<div class="profile-settings" title="Profile Settings" id="profile">
+				
+				<i class="fa fa-times profile-close" title="Close Profile" area-hidden="true" onclick="closeprofile()"></i>
+				
+				<div class="setting-profile">
+					<img src="img/user/profile.jpg" alt="profile Img" title="Profile Image">
+					<label>
+						<i class="far fa-camera camera" onclick="" area-hidden="true" title="Update Your Profile"></i>
+					</label>
+				</div>
+				
+				<div class="profile-detail" title="Profile Detail">
+					<h5 class="profile-name" title="User Name">Arunabh Verma</h5>
+					<h6 class="profile-email" title="Email Id">arunabhverma01@gmail.com</h6>
+				</div>
+				
+				<div class="setting-manage">
+					<a href="#" title="Manage Your Account" onclick="openmodal()">manage your account</a>
+				</div>
+
+				<hr>
+				
+				<div class="profile-logout">
+					<a href="#" title="Log Out">Logout</a>
+				</div>
+	
+			</div>
+		<!-- </div> -->
+	</div>
+</section>
+
+<!-- ******************************************navigation************************************************ -->
+
+<!-- ******************************************follow button************************************************ -->
+<section class="follow" style="
+    width: 100%;
+    height: 5vh;
+    background: #ffffffa6;
+    display: none;
+    justify-content: center;
+    align-items: center;
+" title="Follow Us On">
+    <div class="icon" style="
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: space-around;
+">
+    <div title="Facebook">
+        <i class="fab fa-facebook" area-hidden="true" style="
+    color: #3b5998;
+"></i>
+    </div>
+<div title="Telegram">
+        <i class="fab fa-telegram" area-hidden="true" style="
+    color: #0088cc;
+"></i>
+    </div>
+<div title="Youtube">
+        <i class="fab fa-youtube" area-hidden="true" style="
+    color: #ff0000;
+"></i>
+    </div>
+<div title="Instagram">
+        <i class="fab fa-instagram" area-hidden="true" style="
+    color: #c32aa3;
+"></i>
+    </div>
+<div title="LinkedIn">
+        <i class="fab fa-linkedin" area-hidden="true" style="
+    color: #007bb5;
+"></i>
+    </div>
+    <div title="Twitter">
+        <i class="fab fa-twitter" area-hidden="true" style="
+    color: #1da1f2;
+"></i>
+    </div>
+    <div title="Pinterest">
+        <i class="fab fa-pinterest" area-hidden="true" style="
+    color: #bd081c;
+"></i>
+    </div>
+    </div>
+</section>
+<!-- ******************************************follow button************************************************ -->
+
+<!-- ******************************************sidebar************************************************ -->
+
+<section class="main">
+	
+	<section class="side-bar">
+		
+		<div class="bar-1">
+			<div class="filter">
+					<h5>Filters</h5>
+					<a href="#" class="clearall">CLEAR ALL</a>
+			</div>
+			
+			<div class="catagory filter">
+				<input type="checkbox" checked id="catagory" class="catagory_input">
+				<label for="catagory">
+					<h6>catagories</h6>
+					<i class="fa fa-angle-down" area-hidden="true"></i>
+				</label>
+				<div class="catagory-list">
+					<ul>
+						<li><a href="#">Science</a></li>
+						<li><a href="#">Technology</a></li>
+						<li><a href="#">Engineering</a></li>
+						<li><a href="#">Maths</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="catagory filter">
+				<input type="checkbox" checked  id="price" class="price_input">
+				<label for="price">
+					<h6>price</h6>
+					<i class="fa fa-angle-down" area-hidden="true"></i>
+				</label>
+				<div class="filter-price">
+					<!-- <div class="range">
+						<input type="range" class="custom-range"><br>
+					</div> -->
+					<div class="select">
+						<select>
+							<option>Min</option>
+							<option>Max</option>
+						</select>
+						<select>
+							<option>Max</option>
+							<option>Min</option>
+						</select>
+					</div>
+				</div>
+			</div>
+
+			<div class="catagory filter">
+				<input type="checkbox"  id="author" class="author_input">
+				<label for="author">
+					<h6>Author</h6>
+					<i class="fa fa-angle-down" area-hidden="true"></i>
+				</label>
+				<div class="filter-author custom-checkbox ">
+					<ul>
+						<li>
+							<input type="checkbox" class="custom-control-input" id="author1" name="example1">
+							<label class="custom-control-label" for="author1">Mk Gandhi</label>
+						</li>
+						<li>
+							<input type="checkbox" class="custom-control-input" id="author2" name="example1">
+							<label class="custom-control-label" for="author2">Mk Gandhi</label>
+						</li>
+						<li>
+							<input type="checkbox" class="custom-control-input" id="author3" name="example1">
+							<label class="custom-control-label" for="author3">Mk Gandhi</label>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="catagory filter">
+				<input type="checkbox"  id="catagory" class="catagory_input">
+				<label for="catagory">
+					<h6>catagories</h6>
+					<i class="fa fa-angle-down" area-hidden="true"></i>
+				</label>
+				<div class="catagory-list">
+					<ul>
+						<li><a href="#">Science</a></li>
+						<li><a href="#">Technology</a></li>
+						<li><a href="#">Engineering</a></li>
+						<li><a href="#">Maths</a></li>
+					</ul>
+				</div>
+			</div>
+
+
+			
+		</div>
+	</section>
+
+	<section class="aside-bar">
+		<div class="bar-2">
+			<div class="row-1">
+				<h4>Catagories :</h4>
+				<ul>
+					<li><a href="">science</a></li>
+					<li><a href="">Technology</a></li>
+					<li><a href="">Engineering</a></li>
+					<li><a href="">Maths</a></li>
+				</ul>	
+			</div>
+			<div class="product">
+				<div class="product-1">
+					<div class="star">
+						<input type="checkbox" class="heart" id="heart" name="heart" >
+						<label for="heart">
+							<i class="fal fa-heart" area-hidden="true"></i>
+						</label>
+					</div>
+					<div class="mob-product-tab">
+						<div class="product-img">
+							<img src="img/books/satya ke proyg.jpeg" alt="Book" title="Book">
+						</div>
+						<div class="product-desc">
+							
+							<div class="product-desc-name">
+								<h6>Satya Ke Pryog athwa Aatmakatha</h6>
+								<p>by M. K. Gandhi</p>								
+							</div>
+							
+							<div class="product-desc-star">
+								<div class="product-star">
+									4.7
+									<i class="fa fa-star" area-hidden="true"></i>
+								</div>
+								<p>(1,408)</p>
+							</div>
+							<div class="rate">								
+								<h6>₹ 252</h6><del>₹ 300</del><p>16% off</p>
+							</div>
+						</div>
+					</div>
+				</div>
+<div class="product-1">
+					<div class="star">
+						<input type="checkbox" class="heart" id="heart" name="heart" >
+						<label for="heart">
+							<i class="fal fa-heart" area-hidden="true"></i>
+						</label>
+					</div>
+					<div class="mob-product-tab">
+						<div class="product-img">
+							<img src="img/books/satya ke proyg.jpeg" alt="Book" title="Book">
+						</div>
+						<div class="product-desc">
+							
+							<div class="product-desc-name">
+								<h6>Satya Ke Pryog athwa Aatmakatha</h6>
+								<p>by M. K. Gandhi</p>								
+							</div>
+							
+							<div class="product-desc-star">
+								<div class="product-star">
+									4.7
+									<i class="fa fa-star" area-hidden="true"></i>
+								</div>
+								<p>(1,408)</p>
+							</div>
+							<div class="rate">								
+								<h6>₹ 252</h6><del>₹ 300</del><p>16% off</p>
+							</div>
+						</div>
+					</div>
+				</div>
+<div class="product-1">
+					<div class="star">
+						<input type="checkbox" class="heart" id="heart" name="heart" >
+						<label for="heart">
+							<i class="fal fa-heart" area-hidden="true"></i>
+						</label>
+					</div>
+					<div class="mob-product-tab">
+						<div class="product-img">
+							<img src="img/books/satya ke proyg.jpeg" alt="Book" title="Book">
+						</div>
+						<div class="product-desc">
+							
+							<div class="product-desc-name">
+								<h6>Satya Ke Pryog athwa Aatmakatha</h6>
+								<p>by M. K. Gandhi</p>								
+							</div>
+							
+							<div class="product-desc-star">
+								<div class="product-star">
+									4.7
+									<i class="fa fa-star" area-hidden="true"></i>
+								</div>
+								<p>(1,408)</p>
+							</div>
+							<div class="rate">								
+								<h6>₹ 252</h6><del>₹ 300</del><p>16% off</p>
+							</div>
+						</div>
+					</div>
+				</div>
+<div class="product-1">
+					<div class="star">
+						<input type="checkbox" class="heart" id="heart" name="heart" >
+						<label for="heart">
+							<i class="fal fa-heart" area-hidden="true"></i>
+						</label>
+					</div>
+					<div class="mob-product-tab">
+						<div class="product-img">
+							<img src="img/books/satya ke proyg.jpeg" alt="Book" title="Book">
+						</div>
+						<div class="product-desc">
+							
+							<div class="product-desc-name">
+								<h6>Satya Ke Pryog athwa Aatmakatha</h6>
+								<p>by M. K. Gandhi</p>								
+							</div>
+							
+							<div class="product-desc-star">
+								<div class="product-star">
+									4.7
+									<i class="fa fa-star" area-hidden="true"></i>
+								</div>
+								<p>(1,408)</p>
+							</div>
+							<div class="rate">								
+								<h6>₹ 252</h6><del>₹ 300</del><p>16% off</p>
+							</div>
+						</div>
+					</div>
+				</div>
+<div class="product-1">
+					<div class="star">
+						<input type="checkbox" class="heart" id="heart" name="heart" >
+						<label for="heart">
+							<i class="fal fa-heart" area-hidden="true"></i>
+						</label>
+					</div>
+					<div class="mob-product-tab">
+						<div class="product-img">
+							<img src="img/books/satya ke proyg.jpeg" alt="Book" title="Book">
+						</div>
+						<div class="product-desc">
+							
+							<div class="product-desc-name">
+								<h6>Satya Ke Pryog athwa Aatmakatha</h6>
+								<p>by M. K. Gandhi</p>								
+							</div>
+							
+							<div class="product-desc-star">
+								<div class="product-star">
+									4.7
+									<i class="fa fa-star" area-hidden="true"></i>
+								</div>
+								<p>(1,408)</p>
+							</div>
+							<div class="rate">								
+								<h6>₹ 252</h6><del>₹ 300</del><p>16% off</p>
+							</div>
+						</div>
+					</div>
+				</div>
+<div class="product-1">
+					<div class="star">
+						<input type="checkbox" class="heart" id="heart" name="heart" >
+						<label for="heart">
+							<i class="fal fa-heart" area-hidden="true"></i>
+						</label>
+					</div>
+					<div class="mob-product-tab">
+						<div class="product-img">
+							<img src="img/books/satya ke proyg.jpeg" alt="Book" title="Book">
+						</div>
+						<div class="product-desc">
+							
+							<div class="product-desc-name">
+								<h6>Satya Ke Pryog athwa Aatmakatha</h6>
+								<p>by M. K. Gandhi</p>								
+							</div>
+							
+							<div class="product-desc-star">
+								<div class="product-star">
+									4.7
+									<i class="fa fa-star" area-hidden="true"></i>
+								</div>
+								<p>(1,408)</p>
+							</div>
+							<div class="rate">								
+								<h6>₹ 252</h6><del>₹ 300</del><p>16% off</p>
+							</div>
+						</div>
+					</div>
+				</div>
+<div class="product-1">
+					<div class="star">
+						<input type="checkbox" class="heart" id="heart" name="heart" >
+						<label for="heart">
+							<i class="fal fa-heart" area-hidden="true"></i>
+						</label>
+					</div>
+					<div class="mob-product-tab">
+						<div class="product-img">
+							<img src="img/books/satya ke proyg.jpeg" alt="Book" title="Book">
+						</div>
+						<div class="product-desc">
+							
+							<div class="product-desc-name">
+								<h6>Satya Ke Pryog athwa Aatmakatha</h6>
+								<p>by M. K. Gandhi</p>								
+							</div>
+							
+							<div class="product-desc-star">
+								<div class="product-star">
+									4.7
+									<i class="fa fa-star" area-hidden="true"></i>
+								</div>
+								<p>(1,408)</p>
+							</div>
+							<div class="rate">								
+								<h6>₹ 252</h6><del>₹ 300</del><p>16% off</p>
+							</div>
+						</div>
+					</div>
+				</div>
+<div class="product-1">
+					<div class="star">
+						<input type="checkbox" class="heart" id="heart" name="heart" >
+						<label for="heart">
+							<i class="fal fa-heart" area-hidden="true"></i>
+						</label>
+					</div>
+					<div class="mob-product-tab">
+						<div class="product-img">
+							<img src="img/books/satya ke proyg.jpeg" alt="Book" title="Book">
+						</div>
+						<div class="product-desc">
+							
+							<div class="product-desc-name">
+								<h6>Satya Ke Pryog athwa Aatmakatha</h6>
+								<p>by M. K. Gandhi</p>								
+							</div>
+							
+							<div class="product-desc-star">
+								<div class="product-star">
+									4.7
+									<i class="fa fa-star" area-hidden="true"></i>
+								</div>
+								<p>(1,408)</p>
+							</div>
+							<div class="rate">								
+								<h6>₹ 252</h6><del>₹ 300</del><p>16% off</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="center-paging">
+				<div class="paging">
+				<a href="#" class="prev">Prev</a>
+				<a href="#">1</a>
+				<a href="#">2</a>
+				<a href="#">3</a>
+				<a href="#" class="next">Next</a>
+			</div>
+			</div>
+		</div>
+	</section>
+	
+</section>
+<!-- ******************************************sidebar************************************************ -->
+
+
+<!-- ******************************************Modal-account************************************************ -->
+<section class="modal-account-pos" id="map">
+	<div class="modal-account">
+		<div class="off">
+			<i class="fa fa-times" area-hidden="true" onclick="closemodal()"></i>
+		</div>
+		<div class="change-profile">
+			<div class="profile-img" title="Change Profile Image">
+				<img src="img/user/profile.jpg">
+				<input type="file" id="file">
+				<label for="file">
+					<i class="far fa-camera" area-hidden="true" onclick="closemodal()"></i>
+				</label>
+			</div>
+		</div>
+
+		<div class="change-password-pos">
+			<div class="change-password">
+				<h6>Want to change Your Password</h6>
+				<div class="password-panel">
+					<input type="password" placeholder="Old Password">
+					<input type="password" placeholder="New Password">
+					<input type="password" placeholder="Confirm Password">
+				</div>
+			</div>
+
+				<div class="submit-panel">
+					<input type="submit" value="Apply">
+				</div>
+		</div>
+	</div>
+</section>
+<!-- ******************************************Modal-account************************************************ -->
+
+<!-- ******************************************Modal-mybook************************************************ -->
+<!-- <section class="modal-mybook-pos" id="mmp">
+	<div class="modal-mybook">
+		<div class="book-photo-sec">
+			<div class="book-photo">
+				<input type="file" name="pic" id="pic" style="display: none">
+				<label for="pic">Insert Your Books Cover Page.</label>
+			</div>
+		</div>
+	</div>
+</section> -->
+<!-- ******************************************Modal-mybook************************************************ -->
+
+<!-- *****************************************mobile-menu************************************************ -->
+<section class="mobile-menu" style="display: none;">
+	
+		<div>
+			<i class="fal fa-2x fa-home" area-hidden="true"></i>
+		</div>
+		<div>
+			<i class="fal fa-2x fa-search" area-hidden="true"></i>
+		</div>
+		<div>
+			<i class="fal fa-2x fa-book" area-hidden="true"></i>
+		</div>
+		<div>
+			<i class="fal fa-2x fa-backpack" area-hidden="true"></i>
+		</div>
+		<div>
+			<i class="fal fa-2x fa-user" area-hidden="true"></i>
+		</div>
+	
+</section>
+<!-- *****************************************mobile-menu************************************************ -->
+
+
+<script>
+	var profile = document.getElementById("profile");
+	
+	function showprofile()
+	{
+		var profile = document.getElementById("profile");
+		profile.style.display ="block";		
+	}
+	function closeprofile()
+	{
+		var profile = document.getElementById("profile");
+		profile.style.display ="none";
+	}
+	// window.onclick=function(e)
+	// {
+	// 	if (!e.target.matches('.profile-settings')) 
+	// 	{
+	// 		var myDropdown = document.getElementById("profile");
+	// 		if (myDropdown.ClassList.contains('show')) 
+	// 		{
+	// 			myDropdown.ClassList.remove('show');
+	// 		}
+	// 	}
+	// }
+	function closemodal()
+	{
+		var map = document.getElementById("map");
+		map.style.display="none";
+	}
+	function openmodal()
+	{
+		var map=document.getElementById("map");
+		map.style.display="flex";
+		var profile = document.getElementById("profile");
+		profile.style.display ="none";
+	}
+	function mybooks()
+	{
+		// document.write("Hello");
+		var dropmenu = document.getElementById("bookmenu");
+		// dropmenu.setAttribute("checked"," ");
+		dropmenu.checked=false;
+		var mmp = document.getElementById("mmp");
+		mmp.style.display="block";
+		// dropmenu.type="checkbox";
+		// document.write(dropmenu.style.display);
+	}
+
+</script>
+</body>
+</html>

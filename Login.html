@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Login | Book House</title>
+	<link rel="stylesheet" href="css/login_style.css">
+	<link rel="stylesheet" href="fontawesomepro/css/all.min.css" />
+</head>
+<body>
+	<section class="pos"></section>
+	<section class="pos-error">
+		<div class="error" id="error">
+			<i class="fa fa-times" aria-hidden="true" style="float: right" onclick="error()"></i>
+			<p>You are not belongs to our database. Please Register first</p>
+		</div>
+	</section>
+	<div class="login">
+		<h1>Book<span class="span">House</span></h1>
+		<h1 class="login-txt">Login</h1>
+		<form action="" method="" style="margin: 50px 0 0">
+			<div class="inputBox">
+				<input type="text" name="username" autocomplete="off" required id="us">
+				<label for="us">Username</label>
+			</div>
+
+			<div class="inputBox">
+				<input type="password" name="password" autocomplete="off" required id="ps">
+				<label for="ps">Password</label>
+			</div>
+			<div class="submit">
+				<input type="submit" name="submit" value="Login">
+			</div>
+		</form>
+		<div class="register">
+			<p>or</p>
+			<a href="register.html">register</a>
+		</div>		
+	</div>
+
+	<script>
+		function error() 
+		{
+			//document.write("hello");
+			var error = document.getElementById("error");
+			error.style.display= "none";
+		}
+	</script>
+</body>
+</html>
